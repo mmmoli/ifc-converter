@@ -13,6 +13,8 @@ program
     const name = basename(inputPath, extname(inputPath));
     const defaultOutput = join(dirname(inputPath), `${name}.glb`);
     const outputPath = output ?? defaultOutput;
+    
+
     ifcConvert(inputPath, outputPath)
       .then(function () {
         // the file is converted to glb
